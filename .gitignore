@@ -14,7 +14,8 @@ node_modules/
 .pnp.js
 **/jquery-*.min.js
 *.class
-
+*.classpath
+.metadata/
 **/node_modules/
 # testing
 /coverage
