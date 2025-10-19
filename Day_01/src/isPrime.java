@@ -28,6 +28,6 @@ public class isPrime {
 
 	        sc.close();
 	    }
-	}
+	
 
 }
