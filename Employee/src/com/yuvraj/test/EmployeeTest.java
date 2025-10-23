@@ -47,13 +47,7 @@ public class EmployeeTest {
 			 case 7->{
 				 System.out.println("Think you For Visiting.......");
 			 }
-			 case 8->{
-				 System.out.println("Add Employee to list");
-			 }
-			 case 9->{
-				 System.out.println("Add Employee to list");
-				 sc.close();
-			 }
+			
 			 
 			 }
 		}while(choice!=7);
