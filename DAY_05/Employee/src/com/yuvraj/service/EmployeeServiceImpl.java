@@ -1,5 +1,6 @@
 package com.yuvraj.service;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.yuvraj.beans.Employee;
@@ -10,7 +11,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	private EmployeeDao edao;
 	
 
-	public EmployeeServiceImpl(EmployeeDao edao) {
+	public EmployeeServiceImpl() {
 		 edao=new EmployeeDaoImpl();
 	}
 
@@ -27,6 +28,20 @@ public class EmployeeServiceImpl implements EmployeeService {
 		String role=sc.next();
 		Employee e=new Employee(nm,id,role);
 		return edao.save(e);
+	}
+
+
+	@Override
+	public List<Employee> DisplayAll() {
+		
+		return edao.FindAll();
+	}
+
+
+	@Override
+	public boolean RemoveById(int id) {
+		
+		return edao.DeleteById(id);
 	}
 
 }

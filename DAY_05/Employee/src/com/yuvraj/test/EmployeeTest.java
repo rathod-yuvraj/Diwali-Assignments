@@ -1,9 +1,13 @@
 package com.yuvraj.test;
 
+import java.util.List;
 import java.util.Scanner;
 
+import com.yuvraj.beans.Employee;
 import com.yuvraj.service.EmployeeService;
 import com.yuvraj.service.EmployeeServiceImpl;
+
+
 
 public class EmployeeTest {
 
@@ -30,10 +34,19 @@ public class EmployeeTest {
 				 System.out.println("Add Employee to list");
 			 }
 			 case 2->{
-				 System.out.println("Remove Employee list");
+				 System.out.println("Enter Id");
+				 int id=sc.nextInt();
+				 boolean status=eservice.RemoveById(id);
+				 if(status) {
+					 System.out.println("Remove By Id Employee successfully!..");
+				 }else {
+					 System.out.println(" are Employee Not Found ......");
+				 }
 			 }
 			 case 3->{
 				 System.out.println("Show all Employee");
+				 List <Employee> elist=eservice.DisplayAll();
+				 elist.forEach(System.out::println);
 			 }
 			 case 4->{
 				 System.out.println("Show all Employee in sorted order");
@@ -46,12 +59,6 @@ public class EmployeeTest {
 			 }
 			 case 7->{
 				 System.out.println("Think you For Visiting.......");
-			 }
-			 case 8->{
-				 System.out.println("Add Employee to list");
-			 }
-			 case 9->{
-				 System.out.println("Add Employee to list");
 				 sc.close();
 			 }
 			 
